@@ -29,7 +29,7 @@ type Order @key(fields: "id") {
   items: [ProductVariant!]! @requiresScopes(scopes: [["order:items"]])
 }
 
-type User @key(fields: "id", resolvable: false) {
+type User @key(fields: "id") {
   id: ID!
   phone: String @tag(name: "private")
   email: String @tag(name: "private")
